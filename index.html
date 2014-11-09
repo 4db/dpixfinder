@@ -1,9 +1,50 @@
 <html>
 	<head>
-		<title>Check bad pixel on screen</title>
-		<script language="JavaScript">
-			function changeBack(){
-				document.body.style.background = getRandomColor();
+		<meta charset="UTF-8">
+		<title>Check dead pixel on screen</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body style="cursor: pointer;" onClick="document.body.innerHTML = '';document.body.style.background = getRandomColor();" >
+
+<h1>Have a lot gadget and don't now about dead pixel?</h1>
+<table>
+	<tr>
+		<td>
+			<i class="imac" id="imac">
+				<i class="imac-stand"></i>
+			</i>
+		</td>
+		<td>
+			<i class="desktop-tower"></i>
+			<i class="desktop-monitor" id="desktop-monitor"></i>
+		</td>
+		<td><i class="laptop"></i></td>
+		<td><i class="tablet" id="tablet"></i></td>
+		<td><i class="phone" id="phone"></i></td>
+	</tr>
+	<tr>
+		<td>
+			<i class="imac filled" id='imacFilled'>
+				<i class="imac-stand"></i>
+			</i>
+		</td>
+		<td>
+			<i class="desktop-tower filled"></i>
+			<i class="desktop-monitor filled" id='desktop-monitorFilled'></i>
+		</td>
+		<td><i class="laptop filled"></i></td>
+		<td><i class="tablet filled" id='tabletFilled'></i></td>
+		<td><i class="phone filled" id='phoneFilled'></i></td>
+	</tr>
+</table>
+<h1>Let's try find Dead Pixel in your gadget!</h1>
+
+ 		<script language="JavaScript">
+	 		window.onload = function(){
+	 			var arr = ['phoneFilled','tabletFilled', 'imac', 'desktop-monitor', 'tablet', 'phone', 'imacFilled', 'desktop-monitorFilled'];
+	 			for (var i = arr.length - 1; i >= 0; i--) {
+	 				document.getElementById(arr[i]).style.backgroundColor=getRandomColor();
+	 			};
 			}
 
 			function getRandomColor() {
@@ -16,8 +57,5 @@
 			}
 
 		</script>
-	</head>
-	<body onClick="changeBack()" style="cursor: pointer;" onload="changeBack()">
-		just clicks and find bad pixels
 	</body>
 </html>
