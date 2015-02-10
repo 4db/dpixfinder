@@ -2,4 +2,4 @@ dpixfinder
 ==========
 
 Find all dead pixels on screen:
-<a href='http://alexsdbk.github.io/dpixfinder/'> demo</a>
+<a href='http://aldb.github.io/dpixfinder/'> demo</a>
